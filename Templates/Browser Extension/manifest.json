@@ -1,0 +1,69 @@
+{
+    "manifest_version": 3,
+    "name": "Template Extension",
+    "version": "1.0",
+    "description": "A browser extension template",
+    "options_page": "options/options.html",
+    "icons": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/action.png",
+        "48": "icons/action.png",
+        "128": "icons/action.png"
+      }
+    },
+    "permissions": [
+      "activeTab",
+      "background",
+      "bookmarks",
+      "browsingData",
+      "clipboardRead",
+      "clipboardWrite",
+      "contextMenus",
+      "cookies",
+      "debugger",
+      "desktopCapture",
+      "history",
+      "idle",
+      "notifications",
+      "storage",
+      "system.cpu",
+      "system.memory",
+      "system.storage",
+      "tabCapture",
+      "tabs",
+      "webNavigation",
+      "webRequest"
+    ]
+    ,
+    "host_permissions": [
+      "https://example.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "commands": {
+      "myCommand": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+M",
+          "mac": "Command+Shift+M"
+        },
+        "description": "Perform a special action"
+      }
+    },
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/*"
+        ],
+        "matches": [
+          "https://example.com/*"
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,1 @@
+// background logic for the extension
